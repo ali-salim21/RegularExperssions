@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class One {
     public static void main(String[] args) {
         Pattern r1 = Pattern.compile("^(a|b)*b(a|b)(a|b)(a|b)$");
-        Pattern r2 = Pattern.compile("^(a|b)*aaa(a|b)*$");
+        Pattern r2 = Pattern.compile("^(b|aaa(a)*)*$");
         Scanner read = new Scanner(System.in);
         String s ;
         Matcher in;
 
-        System.out.println("Mode 1 = (a|b)*b(a|b)(a|b)(a|b) \nMode 2 = (a|b)*aaa(a|b)* \nplease enter your mode 1 or 2: ");
+        System.out.println("Mode 1 = (a|b)*b(a|b)(a|b)(a|b) \nMode 2 = (b|aaa(a)*)* \nplease enter your mode 1 or 2: ");
         int choice = read.nextInt();
         
         switch (choice) {
